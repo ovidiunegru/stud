@@ -1,4 +1,4 @@
-package com.example.StudTest.controller;
+package com.example.StudTest.service;
 
 import com.example.StudTest.model.Student;
 import com.example.StudTest.repository.StudentRepository;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class StudentService {
+public class StudentService implements IStudentService {
 
     private final StudentRepository studentRepository;
 
@@ -26,5 +26,10 @@ public class StudentService {
 
     public Optional<Student> getStudentById(Long id){
         return studentRepository.findById(id);
+    }
+
+    @Override
+    private void anaaremere() {
+
     }
 }
